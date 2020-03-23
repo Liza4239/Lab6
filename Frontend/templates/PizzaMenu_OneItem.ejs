@@ -1,0 +1,76 @@
+<%
+function getIngredientsArray(pizza) {
+    //Отримує вміст піци
+    var content = pizza.content;
+    var result = [];
+
+    //Object.keys повертає масив ключів в об’єкті JavaScript
+
+    Object.keys(content).forEach(function (key) {
+
+        //a.concat(b) створює спільний масив із масивів a та b
+        result = result.concat(content[key]);
+    });
+
+    return result;
+}
+%>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+
+    <div class="thumbnail pizza-card">
+
+        <img class="pizza-icon" src="<%= pizza.icon %>">
+
+        <!--        <div class="caption">-->
+
+        <% if(pizza.is_new) { %>
+        <span class="label label-danger">Нова</span>
+        <% } else if(pizza.is_popular) { %>
+            <span class="label label-success">Популярна</span>
+        <% } %>
+
+        <div class="caption">
+            <span class="title"><%= pizza.title %></span>
+            <div class="type"><%= pizza.type %></div>
+            <div class="description">
+                <%= getIngredientsArray(pizza).join(", ") %>
+            </div>
+        </div>
+
+        <div class="inRowContainer">
+            <% if(pizza.big_size) { %>
+                <div class="inRow">
+
+                    <a id="buy-big" class="btn">Купити</a>
+                    <span>
+                        <img class="icon" src="assets/images/size-icon.svg" alt=""><%= pizza.big_size.size %>
+                    </span>
+
+                    <span>
+                        <img class="icon" src="assets/images/weight.svg" alt=""><%= pizza.big_size.weight %>
+                    </span>
+
+                </div>
+            <% } %>
+
+            <% if(pizza.small_size) { %>
+                <div class="inRow">
+
+                    <a id="buy-small" class="btn">Купити</a>
+                    <span>
+                        <img class="icon" src="assets/images/size-icon.svg" alt=""><%= pizza.small_size.size %>
+                    </span>
+
+                    <span>
+                        <img class="icon" src="assets/images/weight.svg" alt=""><%= pizza.small_size.weight %>
+                    </span>
+
+                </div>
+            <% } %>
+        </div>
+
+        <!--        </div>-->
+    </div>
+
+</div>

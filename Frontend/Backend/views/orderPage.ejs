@@ -1,0 +1,77 @@
+<div class="right-grand-container">
+    <div class="top-cart">
+        <div class="order">
+            Замовлення
+            <div class="number-of-pizzas" id="number-of-pizzas">
+                0
+            </div>
+        </div>
+
+        <div class="clear-order">
+            <button id="clean" class="invisible-button">Очистити замовлення</button>
+        </div>
+    </div>
+    <!-- top-cart -->
+
+    <div id="cart" class="center-cart">
+        <!--            pizzas which will be added to cart-->
+    </div>
+
+    <div class="bottom-cart">
+
+        <div class="sum-container">
+
+            <div class="sum">Сума замовлення</div>
+            <div class="in-the-end" id="sum">123</div>
+
+        </div>
+
+        <div class="order-button-container">
+            <button onclick="location.href = '/order.html';"  id="tester" class="btn order-button">Редагувати замовлення</button>
+        </div>
+
+    </div>
+
+</div>
+<% include common/header.ejs %>
+
+
+<div class="order-grand-container">
+    <form>
+        <div class="form-row">
+            <div class="name_label">
+            <div class="form-group col-md-6" >
+                <label for="inputEmail4" >Ім'я</label>
+                <input type="email" class="form-control" id="inputEmail4"placeholder="Ім'я Прізвище">
+            </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Телефон</label>
+                <input type="password" class="form-control" id="inputPassword4"placeholder="+38073387498474">
+            </div>
+            </div>
+        <div class="form-group">
+            <label for="inputAddress">Адреса</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</div>
+
+
+<!--<iframe-->
+<!--        width="600"-->
+<!--        height="450"-->
+<!--        frameborder="0" style="border:0"-->
+<!--        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OezS-Uu39FPJCxUeAHZTKEXyUc1Q_bQ&q=Space+Needle,Seattle+WA" allowfullscreen>-->
+<!--</iframe>-->
+<div id="information_block">
+    <div class="text-info">Інформація про замовлення</div>
+    <div class="average-time-delivery">Приблизний час доставки: </div>
+    <div class="address-delivery">Адреса доставки:</div>
+</div>
+
+<div id="map"></div>
+
+<% include common/footer.ejs %>

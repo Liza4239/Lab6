@@ -1,0 +1,104 @@
+
+<div class="right-grand-container">
+    <div class="top-cart">
+        <div class="order">
+            Замовлення
+            <div class="number-of-pizzas" id="number-of-pizzas">
+                0
+            </div>
+        </div>
+
+        <div class="clear-order">
+            <button id="clean" class="invisible-button">Очистити замовлення</button>
+        </div>
+    </div>
+    <!-- top-cart -->
+
+    <div id="cart" class="center-cart">
+        <!--            pizzas which will be added to cart-->
+    </div>
+
+    <div class="bottom-cart">
+
+        <div class="sum-container">
+
+            <div class="sum">Сума замовлення</div>
+            <div class="in-the-end" id="sum">123</div>
+
+        </div>
+
+        <div class="order-button-container">
+            <button onclick="location.href = '/order.html';"  id="tester" class="btn order-button">Замовити</button>
+        </div>
+
+    </div>
+
+    </div>
+    <!-- top-cart -->
+
+    <div id="cart" class="center-cart"></div>
+
+    <div class="bottom-cart">
+        <!--div class="order-button-container">
+            <a id="tester" class="btn order-button">Замовити</a>
+        </div-->
+
+    </div>
+</div>
+<div class="left-grand-container">
+    <% include common/header.ejs %>
+
+<div class="all-pizzas"><b>Усі піци</b>
+    <!--    <div class="circle-8"><b>8</b></div>-->
+</div>
+
+
+<div class="nav-margin">
+
+    <ul class="nav nav-pills" id="myTab" role="tablist">
+        <li id="1" class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+               aria-selected="true" id="filter-all">Усі</a>
+        </li>
+        <li id="2" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+               aria-selected="false" id="filter-meat">М'ясні</a>
+        </li>
+        <li id="3" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages"
+               aria-selected="false" id="filter-pineapples">З ананасами</a>
+        </li>
+        <li id="4" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+               aria-selected="false" id="filter-mushrooms">З грибами</a>
+        </li>
+        <li id="5" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+               aria-selected="false" id="filter-seafood">З морепродуктами</a>
+        </li>
+    </ul>
+</div>
+
+
+<!-- pizza_list -->
+
+
+<div class="container">
+    <div class="row" id="pizza_list">
+
+    </div>
+    <!-- pizza_list -->
+</div>
+    <% include common/footer.ejs %>
+</div>
+<!-- right-grand-container -->
+
+
+<!-- black-back-container -->
+
+
+
+
+
+
+<!-- container -->

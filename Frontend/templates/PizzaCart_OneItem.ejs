@@ -1,0 +1,53 @@
+<div class="pizza-cart-container">
+
+    <img class="half-image" src= <%= pizza.icon %>>
+
+    <div class="pizza-cart-container-row">
+        <div class="bold-orange-font">
+            <%= pizza.title %> (<%if(size === "big_size") { %>Велика<% } else if(size === "small_size") { %>Мала<% } %>)
+        </div>
+    </div>
+
+    <div class="pizza-cart-container-row">
+
+    <div class="padding-right">
+        <img class="padding" src="assets/images/size-icon.svg">
+        <div class="padding"> <%= pizza[size].size %></div>
+    </div>
+
+    <div class="padding-right">
+        <img class="padding" src="assets/images/weight.svg">
+        <div class="padding"> <%= pizza[size].weight %></div>
+    </div>
+
+</div>
+
+    <div class="pizza-cart-container-row">
+
+    <div class="total-price">
+        <%= pizza[size].price * quantity %>грн
+    </div>
+
+    <div class="minus-counter-plus-container">
+        <button class="minus shadow-sm">
+            −
+        </button>
+
+        <div class="text-area">
+            <%= quantity %>
+        </div>
+
+        <button class="plus">
+            +
+        </button>
+    </div>
+
+    <div class="delete-order">
+        <button class="cross">
+            ×
+        </button>
+    </div>
+
+</div>
+
+</div>
